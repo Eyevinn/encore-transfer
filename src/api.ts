@@ -5,6 +5,7 @@ import swaggerUI from '@fastify/swagger-ui';
 import { TypeBoxTypeProvider } from '@fastify/type-provider-typebox';
 import { Static, Type } from '@sinclair/typebox';
 import { FastifyPluginCallback } from 'fastify';
+import { Config } from './config';
 
 const HelloWorld = Type.String({
   description: 'The magical words!'
@@ -38,6 +39,7 @@ const healthcheck: FastifyPluginCallback<HealthcheckOptions> = (
 
 export interface ApiOptions {
   title: string;
+  config: Config;
 }
 
 export default (opts: ApiOptions) => {
