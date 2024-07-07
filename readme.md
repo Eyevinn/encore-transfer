@@ -22,7 +22,9 @@
 
 </div>
 
-<!-- Add a description of the project here -->
+This service can be part of a video processing pipeline in Open Source Cloud.
+
+[![pipeline](./encore_transfer.png)](https://www.osaas.io)
 
 ## Requirements
 
