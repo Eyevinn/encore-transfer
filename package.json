@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Service for transferring output from encore job with a transfer job in OSC",
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "prepare": "husky install",
     "lint": "eslint .",
     "pretty": "prettier --check --ignore-unknown .",
