@@ -14,7 +14,11 @@ export interface HealthcheckOptions {
   title: string;
 }
 
-const healthcheck: FastifyPluginCallback<HealthcheckOptions> = (fastify, opts, next) => {
+const healthcheck: FastifyPluginCallback<HealthcheckOptions> = (
+  fastify,
+  opts,
+  next
+) => {
   fastify.get<{ Reply: Static<typeof HelloWorld> }>(
     '/',
     {
@@ -49,7 +53,8 @@ export default (opts: ApiOptions) => {
     swagger: {
       info: {
         title: opts.title,
-        description: 'hello',
+        description:
+          'Service for transferring output from encore job with a transfer job in OSC',
         version: 'v1'
       }
     }
@@ -62,4 +67,4 @@ export default (opts: ApiOptions) => {
   // register other API routes here
 
   return api;
-}
+};
