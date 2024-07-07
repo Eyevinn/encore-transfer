@@ -32,15 +32,15 @@
 
 ### Environment Variables
 
-| Variable                    | Description                                                                                    | Default value            |
-| --------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------ |
-| `REDIS_URL`                 | URL to the redis server                                                                        | `redis://localhost:6379` |
-| `REDIS_QUEUE`               | Name of the redis queue to listen to                                                           | `transfer-queue`        |
-| `PORT`                      | Port to bind and listen to                                                       | `8000`                   |
-| `S3_OUTPUT`     | S3 bucket and base folder for output, actual output will be in a subfolder named from the job id             |                |
-| `OSC_ACCESS_TOKEN`          | OSC access token for accessing Encore instance in OSC                                 |                          |
-| `AWS_ACCESS_KEY_ID_SECRET`         | OSC secret containing AWS access key id for `S3_OUTPUT`                    |                          |
-| `AWS_SECRET_ACCESS_KEY_SECRET`     | OSC secret containing AWS secret access for `S3_OUTPUT`                 |                          |
+| Variable                       | Description                                                                                      | Default value            |
+| ------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------ |
+| `REDIS_URL`                    | URL to the redis server                                                                          | `redis://localhost:6379` |
+| `REDIS_QUEUE`                  | Name of the redis queue to listen to                                                             | `transfer-queue`         |
+| `PORT`                         | Port to bind and listen to                                                                       | `8000`                   |
+| `S3_OUTPUT`                    | S3 bucket and base folder for output, actual output will be in a subfolder named from the job id |                          |
+| `OSC_ACCESS_TOKEN`             | OSC access token for accessing Encore instance in OSC                                            |                          |
+| `AWS_ACCESS_KEY_ID_SECRET`     | OSC secret containing AWS access key id for `S3_OUTPUT`                                          |                          |
+| `AWS_SECRET_ACCESS_KEY_SECRET` | OSC secret containing AWS secret access for `S3_OUTPUT`                                          |                          |
 
 ## Development
 
