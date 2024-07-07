@@ -22,19 +22,51 @@
 
 </div>
 
-<!-- Add a description of the project here -->
+This service can be part of a video processing pipeline in Open Source Cloud.
+
+[![pipeline](./encore_transfer.png)](https://www.osaas.io)
 
 ## Requirements
 
-<!--Add any external project dependencies such as node.js version etc here -->
+- Account on [Open Source Cloud](https://app.osaas.io)
 
 ## Installation / Usage
 
-<!--Add clear instructions on how to use the project here -->
+### Environment Variables
+
+| Variable                       | Description                                                                                      | Default value            |
+| ------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------ |
+| `REDIS_URL`                    | URL to the redis server                                                                          | `redis://localhost:6379` |
+| `REDIS_QUEUE`                  | Name of the redis queue to listen to                                                             | `transfer-queue`         |
+| `PORT`                         | Port to bind and listen to                                                                       | `8000`                   |
+| `S3_OUTPUT`                    | S3 bucket and base folder for output, actual output will be in a subfolder named from the job id |                          |
+| `OSC_ACCESS_TOKEN`             | OSC access token for accessing Encore instance in OSC                                            |                          |
+| `AWS_ACCESS_KEY_ID_SECRET`     | OSC secret containing AWS access key id for `S3_OUTPUT`                                          |                          |
+| `AWS_SECRET_ACCESS_KEY_SECRET` | OSC secret containing AWS secret access for `S3_OUTPUT`                                          |                          |
 
 ## Development
 
-<!--Add clear instructions on how to start development of the project here -->
+```bash
+% npm install
+```
+
+Setup necessary environment variables
+
+```bash
+% export OSC_ACCESS_TOKEN=<personal-access-token>
+% export AWS_ACCESS_KEY_ID_SECRET=awsaccesskeyid
+% export AWS_SECRET_ACCESS_KEY_SECRET=awssecretaccesskey
+```
+
+Start service
+
+```bash
+% DEBUG=1 \
+  S3_OUTPUT=s3://lab-testcontent-store/birme/encore/ \
+  REDIS_URL=redis://<ip>:<port> npm start
+```
+
+To avoid accidentially commiting API secrets we encourage strongly not to use `.env` files or similar. Use the in-built functionality in the terminal for these purposes by sourcing env variables from files stored in your home directory outside of the repo.
 
 ## Contributing
 
