@@ -13,9 +13,6 @@
 <div align="center">
 <br />
 
-[![github release](https://img.shields.io/github/v/release/Eyevinn/encore-transfer?style=flat-square)](https://github.com/Eyevinn/encore-transfer/releases)
-[![license](https://img.shields.io/github/license/eyevinn/encore-transfer.svg?style=flat-square)](LICENSE)
-
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/eyevinn/encore-transfer/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
 [![made with hearth by Eyevinn](https://img.shields.io/badge/made%20with%20%E2%99%A5%20by-Eyevinn-59cbe8.svg?style=flat-square)](https://github.com/eyevinn)
 [![Slack](http://slack.streamingtech.se/badge.svg)](http://slack.streamingtech.se)
